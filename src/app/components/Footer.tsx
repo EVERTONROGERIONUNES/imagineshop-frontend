@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { styled } from "styled-components";
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faFacebookSquare, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookSquare, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from '../../../public/logo.png';
 import { Container } from "../styles/util";
@@ -17,7 +17,15 @@ const Footer = () => {
         </StyledFooterContact>
 
         <StyledSocialMediaLinks>
-         
+          <li>
+            <StyledSocialMediaIcon icon={faFacebookSquare} />
+          </li>
+          <li>
+            <StyledSocialMediaIcon icon={faInstagram} />
+          </li>
+          <li>
+            <StyledSocialMediaIcon icon={faYoutube} />
+          </li>
         </StyledSocialMediaLinks>
       </StyledFooterContainer>
     </StyledFooter>
@@ -53,5 +61,9 @@ const StyledSocialMediaLinks = styled.ul`
   gap: 1.5rem;
 `;
 
+const StyledSocialMediaIcon = styled(FontAwesomeIcon)`
+  color: ${({ theme }) => theme.colors.secondary};
+  font-size: 1.875rem;
+`;
 
 export default Footer;

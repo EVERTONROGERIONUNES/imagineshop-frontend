@@ -67,7 +67,9 @@ const StyledMenuItem = styled.li`
     color: #000 ;
   }
 
-
+  a:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export default Header;
